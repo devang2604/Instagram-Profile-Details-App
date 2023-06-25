@@ -1,0 +1,22 @@
+name: instagram_profile_app
+description: A Flutter app to display Instagram profile details
+version: 1.0.0
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^0.13.4
+  html: ^0.15.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/virat_kohli.png
