@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/parser.dart' as parser;
-import 'package:html/dom.dart' as dom;
 
 class ProfileDetailsScreen extends StatefulWidget {
   final String username;
@@ -58,11 +57,7 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: Center(child: Text('Instagram Stats')),
-      ),
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: Colors.grey,
       body: Center(
         child: Container(
           margin: EdgeInsets.all(20),
@@ -70,13 +65,6 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                child: Image.asset(
-                  'assets/images/virat_kohli.png',
-                  height: 200,
-                  width: 200,
-                ),
-              ),
               SizedBox(
                 height: 50,
               ),
@@ -117,9 +105,12 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
 }
 
 void main() {
-  runApp(MaterialApp(
-    home: ProfileDetailsScreen(
-      username: 'virat.kohli',
+  runApp(
+    MaterialApp(
+      home: ProfileDetailsScreen(
+        username:
+            'virat.kohli', // Just change the username here and run the program again, it will give you the approx results.
+      ),
     ),
-  ));
+  );
 }

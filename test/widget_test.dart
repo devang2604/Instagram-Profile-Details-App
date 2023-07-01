@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:instagram_data_extraction_with_api/main.dart';
+import 'package:instagram_profile_app/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(InstagramData(
+    await tester.pumpWidget(MaterialApp(
         followers: followers,
         following: following,
         comments: comments,
@@ -19,4 +19,5 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+}
 }
